@@ -1,0 +1,196 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wedding Registry</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel&family=Dancing+Script&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --cream: #fffae8;
+      --black: #000;
+      --sage: #9caf88;
+    }
+    html, body {
+      margin: 0;
+      padding: 0;
+      background-color: var(--black);
+      color: white;
+      font-family: 'Cinzel', serif;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+      text-align: center;
+    }
+    header {
+      position: sticky;
+      top: 0;
+      background-color: rgba(0, 0, 0, 0.9);
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1000;
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      white-space: nowrap;
+    }
+    .logo {
+      font-family: 'Cinzel', cursive;
+      font-size: 20px;
+      color: var(--cream);
+      flex-shrink: 0;
+    }
+    nav {
+      display: flex;
+      flex-shrink: 1;
+    }
+    nav a {
+      color: var(--sage);
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+      font-family: 'Cinzel', serif;
+      flex-shrink: 0;
+    }
+    nav a:hover {
+      color: var(--cream);
+    }
+    h1 {
+      font-family: 'Dancing Script', cursive;
+      font-size: clamp(48px, 12vw, 100px);
+      color: #fff;
+      margin: 10px auto;
+      padding: 0 10px;
+      text-align: center;
+      text-shadow: 0 0 2px #7a6e3f, 0 0 4px #7a6e3f;
+    }
+    p.subtext {
+      font-size: 18px;
+      color: #ccc;
+      margin-bottom: 40px;
+      
+    }
+    .registry-list {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    .registry {
+      background-color: #111;
+      border: 1px solid var(--cream);
+      border-radius: 10px;
+      padding: 20px;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+    .registry:hover {
+      background-color: var(--cream);
+      color: black;
+      transform: scale(1.03);
+    }
+    .registry h2 {
+      margin: 0;
+      font-size: 26px;
+    }
+    .registry p {
+      font-size: 18px;
+      margin: 5px 0;
+    }
+    .registry a {
+      color: var(--sage);
+      text-decoration: underline;
+      font-weight: bold;
+      font-size: 18px;
+    }
+    #backToTopBtn {
+      position: fixed;
+      bottom: 30px;
+      right: 20px;
+      background-color: var(--cream);
+      color: black;
+      border: none;
+      border-radius: 30px;
+      padding: 10px 16px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      box-shadow: 0 0 10px rgba(255, 250, 232, 0.4);
+      transition: opacity 0.3s ease;
+      opacity: 0;
+      z-index: 999;
+    }
+    #backToTopBtn.show {
+      opacity: 1;
+    }
+    .rights {
+      text-align: center;
+      font-size: 14px;
+      font-family: 'Cinzel', serif;
+      color: #bbb;
+      margin-top: 60px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">June 21, 2025</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="schedule.html">Schedule</a>
+      <a href="lodging.html">Lodging</a>
+      <a href="registry.html">Registry</a>
+      <a href="rsvp.html">RSVP</a>
+    </nav>
+  </header>
+
+  <h1>Our Wedding Registry</h1>
+  <p class="subtext">Your presence is the greatest gift of all, but if you feel inclined to contribute, here are some of our registries.</p>
+
+  <div class="registry-list">
+    <div class="registry">
+      <h2>Zola</h2>
+      <p>Gifts, cash funds, and experiences — all in one place.</p>
+      <a href="https://www.zola.com/registry" target="_blank">Visit Registry</a>
+    </div>
+    <div class="registry">
+      <h2>Amazon Registry</h2>
+      <p>Shop from our wishlist on Amazon.</p>
+      <a href="https://www.amazon.com/wedding" target="_blank">View on Amazon</a>
+    </div>
+    <div class="registry">
+      <h2>Target Registry</h2>
+      <p>Convenient gifting with free shipping options.</p>
+      <a href="https://www.target.com/gift-registry" target="_blank">Find Us on Target</a>
+    </div>
+    <div class="registry">
+      <h2>Cash App</h2>
+      <p>Send a gift directly via Cash App.</p>
+      <a href="https://cash.app/$yourcashtag" target="_blank">$GisselleAlcazar</a>
+    </div>
+    <div class="registry">
+      <h2>Zelle</h2>
+      <p>Send a gift using Zelle with our email address.</p>
+      <a href="mailto:youremail@example.com">713-874-7782</a>
+    </div>
+  </div>
+
+  <div class="rights">&copy; 2025 Junior and Gisselle. All rights reserved.</div>
+  <button id="backToTopBtn" onclick="scrollToTop()">↑ Back to Top</button>
+
+  <script>
+    const backToTopBtn = document.getElementById('backToTopBtn');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 200) {
+        backToTopBtn.classList.add('show');
+      } else {
+        backToTopBtn.classList.remove('show');
+      }
+    });
+    function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  </script>
+</body>
+</html>

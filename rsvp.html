@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wedding Info</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel&family=Dancing+Script&display=swap" rel="stylesheet">
+  <style>
+  :root {
+      --cream: #fffae8;
+      --sage: #9caf88;
+      --black: #000;
+    }
+  html, body {
+      margin: 0;
+      padding: 0;
+      background-color: var(--black);
+      color: white;
+      font-family: 'Cinzel', serif;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+      text-align: center;
+}
+    
+    header {
+      position: sticky;
+      top: 0;
+      background-color: rgba(0, 0, 0, 0.9);
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1000;
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      white-space: nowrap;
+    }
+    .logo {
+      font-family: 'Cinzel', cursive;
+      font-size: 20px;
+      color: var(--cream);
+      flex-shrink: 0;
+    }
+    nav {
+      display: flex;
+      flex-shrink: 1;
+    }
+    nav a {
+      color: var(--sage);
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+      font-family: 'Cinzel', serif;
+      flex-shrink: 0;
+    }
+    nav a:hover {
+      color: var(--cream);
+    }
+
+    .hidden-content {
+      display: none;
+    }
+    .auth-container {
+      max-width: 400px;
+      margin: 100px auto;
+    }
+    .auth-container input {
+      padding: 10px;
+      font-size: 16px;
+      margin-top: 10px;
+      width: 80%;
+    }
+    .auth-container button {
+      padding: 10px 20px;
+      font-size: 16px;
+      margin-top: 10px;
+      background-color: #9caf88;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    .auth-error {
+      color: red;
+      font-size: 14px;
+      margin-top: 10px;
+    }
+    .wedding-date {
+      font-family: 'Dancing Script', cursive;
+      font-size: 36px;
+      margin-bottom: 10px;
+      color: white;
+    }
+    .event-title {
+      font-size: 28px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    .event-time, .event-location, .event-attire {
+      font-size: 18px;
+      margin-bottom: 5px;
+    }
+    .event-attire {
+      color: #ccc;
+      margin-bottom: 20px;
+    }
+    .event-location {
+      color: #fff;
+      text-decoration: underline;
+    }
+    .info-button {
+      font-family: 'Cinzel', serif;
+      font-size: 18px;
+      color: #000;
+      background-color: #fff;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 8px;
+      text-decoration: none;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    .info-button:hover {
+      background-color: #ccc;
+    }
+    .glow-button {
+      background-color: #9caf88;
+      color: #fff;
+      box-shadow: 0 0 10px #9caf88, 0 0 20px #9caf88;
+      animation: pulseGlow 2s infinite ease-in-out;
+    }
+    @keyframes pulseGlow {
+      0% { transform: scale(1); box-shadow: 0 0 10px #9caf88; }
+      50% { transform: scale(1.05); box-shadow: 0 0 20px #9caf88; }
+      100% { transform: scale(1); box-shadow: 0 0 10px #9caf88; }
+    }
+    .faq {
+      max-width: 700px;
+      margin: 60px auto;
+      text-align: left;
+    }
+    .faq h2 {
+      font-size: 28px;
+      margin-bottom: 20px;
+      color: #fff;
+      text-align: center;
+      font-family: 'Cinzel', serif;
+    }
+    .faq-item {
+      background-color: #111;
+      border: 1px solid #9caf88;
+      border-radius: 10px;
+      padding: 20px;
+      margin-bottom: 20px;
+    }
+    .faq-item h3 {
+      margin: 0 0 10px;
+      font-size: 20px;
+      color: #fffae8;
+    }
+    .faq-item p {
+      margin: 0;
+      font-size: 16px;
+      color: #ccc;
+    }
+ .event-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+  margin: 40px auto;
+  padding: 0 10px;
+}
+
+.event-card {
+  background-color: #111;
+  border: 1px solid var(--sage);
+  border-radius: 10px;
+  padding: 15px;
+  flex: 1 1 250px;
+  max-width: 300px;
+  box-sizing: border-box;
+}
+
+
+    .event-card h3 {
+      margin: 0;
+      font-size: 16px;
+      color: #fff;
+    }
+    .event-card p {
+      font-size: 13px;
+      color: #ccc;
+    }
+    
+    .footer .rights {
+      font-size: 14px;
+      font-family: 'Cinzel', serif;
+      color: #bbb;
+      margin-top: 30px;
+    }
+    #backToTop {
+      position: fixed;
+      bottom: 30px;
+      right: 20px;
+      background-color: #fffae8;
+      color: black;
+      border: none;
+      border-radius: 30px;
+      padding: 10px 16px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      box-shadow: 0 0 10px rgba(255, 250, 232, 0.3);
+      transition: opacity 0.3s ease;
+      opacity: 0;
+      z-index: 999;
+    }
+    #backToTop.show {
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+
+<div id="header-container"></div>
+
+
+  <header>
+  <div class="logo">June 21, 2025</div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="schedule.html">Schedule</a>
+    <a href="lodging.html">Lodging</a>
+    <a href="registry.html">Registry</a>
+    <a href="rsvp.html">RSVP</a>
+  </nav>
+</header>
+
+  <div class="auth-container" id="authContainer">
+    <h2>Please enter your passkey to access this page</h2>
+    <input type="password" id="passkeyInput" placeholder="Enter passkey" onkeydown="if(event.key==='Enter'){checkPasskey()}" />
+    <br>
+    <button onclick="checkPasskey()">Submit</button>
+    <div id="authError" class="auth-error"></div>
+  </div>
+
+  <div id="rsvpContent" class="hidden-content">
+    <div class="wedding-date">Saturday, June 21, 2025</div>
+    <div class="event-title">Ceremony & Reception</div>
+    <div class="event-time">6:00 pm - Until</div>
+    <div class="event-location">2009 Sheridan, Baytown, TX 77521</div>
+    <div class="event-attire">Ceremony Attire: Formal | Reception Attire: Casual & Comfortable</div>
+
+    <div class="event-row">
+      <div class="event-card">
+        <h3>Private Wedding Ceremony</h3>
+        <p>June 21, 6:00 PM<br><em>2009 Sheridan Dr., Baytown, TX 77520</em></p>
+      </div>
+      <div class="event-card">
+        <h3>Private Ceremony Dinner</h3>
+        <p>June 21, 7:00 PM<br><em>2009 Sheridan Dr., Baytown, TX 77520</em></p>
+      </div>
+      <div class="event-card">
+        <h3>Reception and After Party</h3>
+        <p>June 21, 9:00 PM<br><em>2009 Sheridan Dr., Baytown, TX 77520</em></p>
+      </div>
+    </div>
+
+    <div style="margin: 40px 0;">
+      <p style="font-family: 'Cinzel', serif; font-size: 16px; color: #ccc; margin-bottom: 10px;">Please RSVP no later than [date]</p>
+      <a href="#" onclick="handleRSVPClick(event)" class="info-button glow-button" style="display: inline-block; font-size: 20px; padding: 16px 44px;">
+        RSVP NOW
+      </a>
+    </div>
+
+    <div style="margin-top: 30px;">
+      <a href="https://maps.google.com/?q=2009+Sheridan,+Baytown,+TX+77521" target="_blank" class="info-button">View Map</a>
+    </div>
+
+    <div class="faq">
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq-item">
+        <h3>Are children allowed?</h3>
+        <p>We kindly request that only children of the immediate family attend the ceremony. Thank you for your understanding!</p>
+      </div>
+      <div class="faq-item">
+        <h3>What should I wear?</h3>
+        <p>The ceremony is formal, so dress accordingly. For the reception, feel free to wear casual and comfortable attire to enjoy the celebration.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Where should I park?</h3>
+        <p>Guests may park along the neighborhood streets near the event location at 2009 Sheridan. Please be courteous to residents and avoid blocking driveways.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Will there be food and drinks?</h3>
+        <p>Yes! A full dinner and beverages will be served at the ceremony dinner and reception.</p>
+      </div>
+    </div>
+  </div>
+<div class="footer">
+    <div class="rights">&copy; 2025 Junior and Gisselle. All rights reserved.</div>
+</div>
+<button id="backToTop" onclick="scrollToTop()">Back to Top</button>
+<script>
+  function checkPasskey() {
+    const passkey = document.getElementById("passkeyInput").value;
+    const allowedKey = "lywood2025";
+    const authError = document.getElementById("authError");
+    if (passkey === allowedKey) {
+      document.getElementById("authContainer").style.display = "none";
+      document.getElementById("rsvpContent").style.display = "block";
+    } else {
+      authError.textContent = "Incorrect passkey. Please try again.";
+    }
+  }
+
+  function handleRSVPClick(event) {
+    event.preventDefault();
+    const newTab = window.open("https://script.google.com/macros/s/AKfycbyTdvSX-pQPTrqlUzQsusoMBvGuDbtri68Pc2kHlmPjPQUvC4fJRnyNKyqXpFRCbE56/exec", "_blank");
+    const checkIfClosed = setInterval(() => {
+      if (newTab.closed) {
+        clearInterval(checkIfClosed);
+      }
+    }, 500);
+  }
+
+  window.addEventListener('scroll', () => {
+    const btn = document.getElementById('backToTop');
+    if (btn) {
+      btn.classList.toggle('show', window.scrollY > 200);
+    }
+  });
+
+  function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+</script>
+
+
+<div id="footer-container"></div>
+
+<script>
+  fetch('header.html')
+    .then(res => res.text())
+    .then(data => document.getElementById('header-container').innerHTML = data);
+
+  fetch('footer.html')
+    .then(res => res.text())
+    .then(data => document.getElementById('footer-container').innerHTML = data);
+</script>
+
+</body>
+</html>

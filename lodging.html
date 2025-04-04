@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>The Lywood Wedding</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel&family=Alice&family=Great+Vibes&family=Dancing+Script&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --cream: #fffae8;
+      --sage: #9caf88;
+      --black: #000;
+    }
+    html, body {
+      margin: 0;
+      padding: 0;
+      background-color: var(--black);
+      color: white;
+      font-family: 'Cinzel', serif;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+      text-align: center;
+    }
+    header {
+      position: sticky;
+      top: 0;
+      background-color: rgba(0, 0, 0, 0.9);
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1000;
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      white-space: nowrap;
+    }
+    .logo {
+      font-family: 'Cinzel', cursive;
+      font-size: 20px;
+      color: var(--cream);
+      flex-shrink: 0;
+    }
+    nav {
+      display: flex;
+      flex-shrink: 1;
+    }
+    nav a {
+      color: var(--sage);
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+      font-family: 'Cinzel', serif;
+      flex-shrink: 0;
+    }
+    nav a:hover {
+      color: var(--cream);
+    }
+    
+     h1 {
+      font-family: 'Dancing Script', cursive;
+      font-size: clamp(48px, 12vw, 100px);
+      color: #fff;
+      margin: 10px auto;
+      padding: 0 10px;
+      text-align: center;
+      text-shadow: 0 0 2px #7a6e3f, 0 0 4px #7a6e3f;
+    }
+    p.subtext {
+      font-size: 18px;
+      color: #ccc;
+      margin-bottom: 40px;
+      
+    }
+    .hotel-list {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    .hotel {
+      background-color: #111;
+      border: 1px solid var(--cream);
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+      transition: transform 0.3s ease, background-color 0.3s ease;
+    }
+    .hotel:hover {
+      transform: scale(1.03);
+      background-color: var(--cream);
+      color: black;
+    }
+    .hotel h2 {
+      margin: 0;
+      font-size: 22px;
+    }
+    .hotel p {
+      font-size: 18px;
+      margin: 5px 0;
+    }
+    .hotel a {
+      color: var(--sage);
+      text-decoration: underline;
+      font-weight: bold;
+      font-size: 16px;
+    }
+    #backToTopBtn {
+      position: fixed;
+      bottom: 30px;
+      right: 20px;
+      background-color: var(--cream);
+      color: black;
+      border: none;
+      border-radius: 30px;
+      padding: 10px 16px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      box-shadow: 0 0 10px rgba(255, 250, 232, 0.4);
+      transition: opacity 0.3s ease;
+      opacity: 0;
+      z-index: 999;
+    }
+    #backToTopBtn.show {
+      opacity: 1;
+    }
+    .rights {
+      text-align: center;
+      font-size: 14px;
+      font-family: 'Cinzel', serif;
+      color: #bbb;
+      margin-top: 60px;
+    }
+    </style>
+</head>
+<body>
+
+<div id="header-container"></div>
+
+
+  <header>
+    <div class="logo">June 21, 2025</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="schedule.html">Schedule</a>
+      <a href="lodging.html">Lodging</a>
+      <a href="registry.html">Registry</a>
+      <a href="rsvp.html">RSVP</a>
+    </nav>
+  </header>
+  
+  <div class="header">
+
+<h1>Where to Stay</h1>
+<p class="subtext">We’ve selected a few comfortable and convenient hotel options in Baytown for our out-of-town guests.</p>
+<div class="hotel-list">
+<div class="hotel">
+<h2>Hyatt Regency Baytown</h2>
+<p>100 Convention Center Way, Baytown, TX 77520</p>
+<a href="https://www.hyatt.com/hyatt-regency/en-US/iahrb-hyatt-regency-baytown-houston" target="_blank">Visit Website</a>
+</div>
+<div class="hotel">
+<h2>SpringHill Suites by Marriott</h2>
+<p>5169 I-10 East, Baytown, TX 77521</p>
+<a href="https://www.marriott.com/en-us/hotels/houbt-springhill-suites-houston-baytown/overview" target="_blank">Visit Website</a>
+</div>
+<div class="hotel">
+<h2>Hilton Garden Inn Baytown</h2>
+<p>4910 E Chase St, Baytown, TX 77521</p>
+<a href="https://www.hilton.com/en/hotels/houbagi-hilton-garden-inn-houston-baytown" target="_blank">Visit Website</a>
+</div>
+</div>
+<h1 style="margin-top: 60px;">Things to Do</h1>
+<p class="subtext">Explore fun things to do while you're here in the Baytown and Houston area!</p>
+<div class="hotel-list">
+<div class="hotel">
+<h2>Houston Museum District</h2>
+<p>Explore 19 museums including art, science, and history — all in one cultural hub.</p>
+<a href="https://houmuse.org/" target="_blank">Learn More</a>
+</div>
+<div class="hotel">
+<h2>Kemah Boardwalk</h2>
+<p>A waterfront amusement area with rides, restaurants, shops, and games.</p>
+<a href="https://www.kemahboardwalk.com/" target="_blank">Plan Your Visit</a>
+</div>
+<div class="hotel">
+<h2>Baytown Nature Center</h2>
+<p>Beautiful trails, birdwatching, and scenic views in this peaceful outdoor park.</p>
+<a href="https://www.baytown.org/708/Nature-Center" target="_blank">Visit Site</a>
+</div>
+<div class="hotel">
+<h2>Houston Zoo</h2>
+<p>A favorite for families and animal lovers, located inside Hermann Park.</p>
+<a href="https://www.houstonzoo.org/" target="_blank">Explore the Zoo</a>
+</div>
+<div class="hotel">
+<h2>San Jacinto Monument &amp; Museum</h2>
+<p>Discover Texas history at the site of the Battle of San Jacinto.</p>
+<a href="https://www.sanjacinto-museum.org/" target="_blank">Learn More</a>
+</div>
+</div>
+<h1 style="margin-top: 60px;">Downtown Dining &amp; Lounges</h1>
+<p class="subtext">Looking for a stylish night out in Houston? Here are a few elegant spots for drinks, dinner, and late-night vibes.</p>
+<div class="hotel-list">
+<div class="hotel">
+<h2>Bungalow Houston</h2>
+<p>A trendy rooftop lounge with craft cocktails and upscale food in a chic setting.</p>
+<a href="https://bungalowdining.com/" target="_blank">Visit Website</a>
+</div>
+<div class="hotel">
+<h2>Post Houston</h2>
+<p>A massive food hall with rooftop views, cultural events, and a diverse mix of eateries.</p>
+<a href="https://www.posthtx.com/" target="_blank">Explore Post</a>
+</div>
+<div class="hotel">
+<h2>Pappadeaux's Seafood Kitchen</h2>
+<p>A vibrant seafood spot with bold flavors and an energetic dining atmosphere off I-10.</p>
+<a href="https://pappadeaux.com/" target="_blank">View Location</a>
+</div>
+<div class="hotel">
+<h2>Chapman &amp; Kirby</h2>
+<p>A luxe industrial-chic space perfect for cocktails, music, and socializing in EaDo.</p>
+<a href="https://www.chapmanandkirby.com/" target="_blank">Check It Out</a>
+</div>
+</div>
+<div class="rights">© 2025 Junior and Gisselle. All rights reserved.</div>
+<button id="backToTopBtn" onclick="scrollToTop()">↑ Back to Top</button>
+<script>
+    const backToTopBtn = document.getElementById('backToTopBtn');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 200) {
+        backToTopBtn.classList.add('show');
+      } else {
+        backToTopBtn.classList.remove('show');
+      }
+    });
+    function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  </script>
+<div id="footer-container"></div>
+  
+  </body>
+</html>

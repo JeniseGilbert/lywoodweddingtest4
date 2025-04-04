@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wedding Weekend Schedule</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel&family=Alice&family=Dancing+Script&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --cream: #fffae8;
+      --sage: #9caf88;
+      --black: #000;
+    }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      background-color: var(--black);
+      color: white;
+      font-family: 'Alice', serif;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      background-color: rgba(0, 0, 0, 0.9);
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1000;
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      white-space: nowrap;
+    }
+    .logo {
+      font-family: 'Cinzel', cursive;
+      font-size: 20px;
+      color: var(--cream);
+      flex-shrink: 0;
+    }
+    nav {
+      display: flex;
+      flex-shrink: 1;
+    }
+    nav a {
+      color: var(--sage);
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+      font-family: 'Cinzel', serif;
+      flex-shrink: 0;
+    }
+    nav a:hover {
+      color: var(--cream);
+    }
+
+    h1 {
+  font-family: 'Dancing Script', cursive;
+  font-size: clamp(48px, 12vw, 100px);
+  color: #fff;
+  margin: 10px auto;
+  padding: 0 10px;
+  text-align: center;
+  text-shadow: 0 0 2px #7a6e3f, 0 0 4px #7a6e3f;
+}
+
+   
+      
+
+    .subtext {
+      font-size: 18px;
+      font-family: 'Cinzel', serif;
+      color: #ccc;
+      margin-bottom: 40px;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+    }
+
+    .schedule-section {
+      width: 100%;
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .event {
+      margin: 80px 0;
+      padding: 0 10px;
+      text-align: center;
+    }
+
+    .event-title {
+      font-family: 'Dancing Script', serif;
+      font-size: 50px;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+
+    .event-date {
+      font-size: 30px;
+      color: #d0e0d0;
+      margin-top: 5px;
+      text-align: center;
+    }
+
+    .event-details {
+      font-size: 20px;
+      font-family: 'Alice', serif;
+      text-align: center;
+    }
+
+    .location {
+      color: var(--sage);
+      font-size: 16px;
+      font-style: italic;
+      display: block;
+      margin-top: 5px;
+      text-align: center;
+    }
+
+    hr {
+      width: 80px;
+      margin: 10px auto;
+      border: 1px solid var(--sage);
+    }
+
+    .footer {
+      margin: 40px auto 20px;
+      max-width: 800px;
+      padding: 20px;
+      font-size: 20px;
+      line-height: 1.7;
+      color: #F7F6F2;
+      font-family: 'Dancing Script', cursive;
+      text-align: center;
+    }
+
+    .footer .rights {
+      font-size: 14px;
+      font-family: 'Cinzel', serif;
+      color: #bbb;
+      margin-top: 30px;
+    }
+
+    #backToTop {
+      position: fixed;
+      bottom: 30px;
+      right: 20px;
+      background-color: var(--cream);
+      color: black;
+      border: none;
+      border-radius: 30px;
+      padding: 10px 16px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      box-shadow: 0 0 10px rgba(255, 250, 232, 0.3);
+      transition: opacity 0.3s ease;
+      opacity: 0;
+      z-index: 999;
+    }
+
+    #backToTop.show {
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+
+<div id="header-container"></div>
+
+
+  <header>
+    <div class="logo">June 21, 2025</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="schedule.html">Schedule</a>
+      <a href="lodging.html">Lodging</a>
+      <a href="registry.html">Registry</a>
+      <a href="rsvp.html">RSVP</a>
+    </nav>
+  </header>
+
+  <!-- ... keep everything before this unchanged ... -->
+
+<div class="header">
+  <h1>Weekend Schedule</h1>
+  <p class="subtext">Here’s everything planned for our special weekend together.</p>
+</div>
+
+<div class="schedule-section">
+  <div class="event">
+    <div class="event-date">Friday, June 20</div>
+    <div class="event-title">Private Rehearsal Dinner</div>
+    <hr>
+    <div class="event-details">
+      6:00 PM<br>
+      <span class="location">Private Event</span>
+      Attire: Garden Chic
+    </div>
+  </div>
+
+  <div class="event">
+    <div class="event-date">Saturday, June 21</div>
+    <div class="event-title">Private Wedding Ceremony</div>
+    <hr>
+    <div class="event-details">
+      6:00 PM<br>
+      <span class="location">Private Event</span>
+      Attire: Formal
+    </div>
+  </div>
+
+  <div class="event">
+    <div class="event-date">Saturday, June 21</div>
+    <div class="event-title">Private Ceremony Dinner</div>
+    <hr>
+    <div class="event-details">
+      7:30 PM<br>
+      <span class="location">Private Event</span>
+      Attire: Formal
+    </div>
+  </div>
+
+  <div class="event">
+    <div class="event-date">Saturday, June 21</div>
+    <div class="event-title">Reception Party</div>
+    <hr>
+    <div class="event-details">
+      9:00 PM<br>
+      <span class="location">2009 Sheridan Dr. Baytown, TX</span>
+      Attire: Comfy & Casual
+    </div>
+  </div>
+</div>
+
+<!-- ... keep everything after this unchanged ... -->
+
+  <div class="footer">
+    <div class="rights">&copy; 2025 Junior and Gisselle. All rights reserved.</div>
+  </div>
+
+  <button id="backToTop" onclick="scrollToTop()">Back to Top</button>
+
+  <script>
+    window.addEventListener('scroll', () => {
+      const btn = document.getElementById('backToTop');
+      if (btn) {
+        btn.classList.toggle('show', window.scrollY > 200);
+      }
+    });
+    function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  </script>
+
+
+<div id="footer-container"></div>
+
+<script>
+  fetch('header.html')
+    .then(res => res.text())
+    .then(data => document.getElementById('header-container').innerHTML = data);
+
+  fetch('footer.html')
+    .then(res => res.text())
+    .then(data => document.getElementById('footer-container').innerHTML = data);
+</script>
+
+</body>
+</html>

@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>The Lywood Wedding</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel&family=Alice&family=Great+Vibes&family=Dancing+Script&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --cream: #fffae8;
+      --sage: #9caf88;
+      --black: #000;
+    }
+    html, body {
+      margin: 0;
+      padding: 0;
+      background-color: var(--black);
+      color: white;
+      font-family: 'Alice', serif;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+    header {
+      position: sticky;
+      top: 0;
+      background-color: rgba(0, 0, 0, 0.9);
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1000;
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      white-space: nowrap;
+    }
+    .logo {
+      font-family: 'Cinzel', cursive;
+      font-size: 20px;
+      color: var(--cream);
+      flex-shrink: 0;
+    }
+    nav {
+      display: flex;
+      flex-shrink: 1;
+    }
+    nav a {
+      color: var(--sage);
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+      font-family: 'Cinzel', serif;
+      flex-shrink: 0;
+    }
+    nav a:hover {
+      color: var(--cream);
+    }
+    .header {
+      background-color: #000;
+      padding: 60px 20px 10px;
+      text-align: center;
+    }
+    .header .the {
+      font-family: 'Great Vibes', cursive;
+      font-size: 10vw;
+      color: white;
+    }
+    .header .lywood {
+      font-family: 'Cinzel', serif;
+      font-size: 12vw;
+      color: white;
+      margin: -10px 0 0;
+      text-shadow: 0 0 10px var(--cream), 0 0 20px var(--cream);
+      animation: streakGlow 2s ease-in-out infinite alternate, pulse 15s ease-in-out infinite;
+    }
+    @keyframes streakGlow {
+      from { text-shadow: 0 0 6px var(--sage); }
+      to { text-shadow: 0 0 16px var(--sage); }
+    }
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.1); }
+      100% { transform: scale(1); }
+    }
+    .header .wedding {
+      font-family: 'Cinzel', serif;
+      font-size: 6vw;
+      color: white;
+      margin-top: -5px;
+      letter-spacing: 4px;
+    }
+    .date-heading {
+      font-family: 'Cinzel', serif;
+      font-size: 18px;
+      font-weight: 400;
+      margin-top: 20px;
+      margin-bottom: 8px;
+      color: white;
+      text-align: center;
+    }
+    .countdown {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: nowrap;
+      flex-direction: row;
+      margin: 10px auto 30px;
+      overflow-x: auto;
+      text-align: center;
+    }
+    .countdown-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      color: #F7F6F2;
+    }
+    .countdown-number {
+      font-family: 'Impact', cursive;
+      font-size: 6vw;
+      letter-spacing: 0.5px;
+      font-weight: lighter;
+      animation: glowGold 2s ease-in-out infinite alternate;
+    }
+    .countdown-label {
+      font-family: 'Cinzel', serif;
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    @keyframes glowGold {
+      from { color: #F7F6F2; text-shadow: 0 0 3px #D4AF37; }
+      to { color: #F7F6F2; text-shadow: 0 0 4px #D4AF37, 0 0 10px #D4AF37; }
+    }
+    .gallery-wrapper {
+      overflow: hidden;
+      width: 100%;
+      background-color: #000;
+    }
+    .scroll-gallery {
+      display: flex;
+      width: max-content;
+      animation: scroll 40s linear infinite;
+    }
+    .scroll-gallery img {
+      height: 30vw;
+      width: auto;
+      display: block;
+      margin: 0;
+      padding: 0;
+    }
+    @keyframes scroll {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+    .footer {
+      margin: 20px auto 20px;
+      max-width: 800px;
+      padding: 20px;
+      font-size: 24px;
+      line-height: 1.7;
+      color: #F7F6F2;
+      font-family: 'Dancing Script', cursive;
+    }
+    .footer img {
+      max-width: 100%;
+      height: auto;
+      margin-top: 5px;
+    }
+    .footer .rights {
+      text-align: center;
+      font-size: 14px;
+      font-family: 'Cinzel', serif;
+      color: #bbb;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+
+<div id="header-container"></div>
+
+
+  <header>
+    <div class="logo">June 21, 2025</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="schedule.html">Schedule</a>
+      <a href="lodging.html">Lodging</a>
+      <a href="registry.html">Registry</a>
+      <a href="rsvp.html">RSVP</a>
+    </nav>
+  </header>
+  <div class="header">
+    <div class="the">The</div>
+    <div class="lywood">LYWOOD</div>
+    <div class="wedding">WEDDING</div>
+  </div>
+  <hr style="width: 200px; margin: 20px auto; border: 1px solid #9caf88;">
+  <div class="date-heading">June 21, 2025 at 6:00 PM</div>
+  <div class="countdown" id="countdown">
+    <div class="countdown-item"><div class="countdown-number" id="days">0</div><div class="countdown-label">Days</div></div>
+    <div class="countdown-item"><div class="countdown-number" id="hours">0</div><div class="countdown-label">Hours</div></div>
+    <div class="countdown-item"><div class="countdown-number" id="minutes">0</div><div class="countdown-label">Minutes</div></div>
+    <div class="countdown-item"><div class="countdown-number" id="seconds">0</div><div class="countdown-label">Seconds</div></div>
+  </div>
+  <div class="gallery-wrapper">
+    <div class="scroll-gallery">
+      <img src="https://i.imgur.com/H3BqxJa.jpg" />
+      <img src="https://i.imgur.com/fpXeAcH.jpg" />
+      <img src="https://i.imgur.com/Kp7VC9l.jpg" />
+      <img src="https://i.imgur.com/l42VjYr.jpg" />
+      <img src="https://i.imgur.com/K8yv48Z.jpg" />
+      <img src="https://i.imgur.com/kgeSQNK.jpg" />
+      <img src="https://i.imgur.com/gquhRkO.jpg" />
+    </div>
+  </div>
+  <div class="footer">
+    <p>
+      We are excited to celebrate this special moment with the people who mean the most to us. We invite you to join us for a day filled with love, laughter, and unforgettable memories as we say “I do.” We’d be honored to have your company at our wedding! Please explore our website for all the details, including the date, location, and RSVP information. We can’t wait to celebrate together!
+    </p>
+    <img src="https://i.imgur.com/zovqURF.png" alt="J & G Monogram" />
+    <div class="rights">&copy; 2025 Junior and Gisselle. All rights reserved.</div>
+  </div>
+  <script>
+    const weddingTime = new Date("June 21, 2025 18:00:00").getTime();
+    const countdownInterval = setInterval(() => {
+      const now = new Date().getTime();
+      const distance = weddingTime - now;
+      if (distance < 0) {
+        clearInterval(countdownInterval);
+        document.getElementById("countdown").innerHTML = "<h2 style='color:white; font-family: Cinzel, serif;'>Now introducing Mr. and Mrs. Lywood... 💍✨</h2>";
+        return;
+      }
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      document.getElementById("days").innerText = days;
+      document.getElementById("hours").innerText = hours;
+      document.getElementById("minutes").innerText = minutes;
+      document.getElementById("seconds").innerText = seconds;
+    }, 1000);
+  </script>
+
+
+<div id="footer-container"></div>
+
+
+
+</body>
+</html>
